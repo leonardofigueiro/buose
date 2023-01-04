@@ -18,5 +18,27 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "indent": [
+            "error",
+            2,
+            {
+              "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/ban-types": "off"
+        
     }
 }

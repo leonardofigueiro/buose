@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Quicksand:wght@300;400;500;600&display=swap');
 :root {
  
+  --primary1: #E2E6E3;
   --primary3: #ADC1B4;
+  --primary6: #739880;
+  --primary7: #618A70;
+  --primary12: #1D432B;
 
   --secondary0: #ECEAEA;
   --secondary1: #CECCCC;
@@ -13,12 +16,16 @@
   --secondary7: #896362;
   --secondary8: #7B5351;
   --secondary10: #5C3534;
+  --secondary11: #4B2826;
   --secondary13: #220E0D;
+  --secondary14: #130606;
   
   --fontDisplay: 'Quicksand', sans-serif;
   --fontDefault: 'Montserrat', sans-serif;
 }
-
+* {
+  font-size: 16px;
+}
 
 body {
   background-color: var(--secondary1);

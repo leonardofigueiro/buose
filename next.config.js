@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    contentSecurityPolicy: 'default-src \'self\'; script-src \'none\'; sandbox;',
   },
   compiler: {
     styledComponents: true,
@@ -12,7 +12,7 @@ const nextConfig = {
     // Configura o @svgr como um loader para imagens SVG usando o hook para o Webpack
     config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack"],
+      use: ['@svgr/webpack'],
     });
 
     // O objeto config modificado precisa ser retornado
@@ -22,4 +22,4 @@ const nextConfig = {
 
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
