@@ -7,7 +7,7 @@ import ContentTwo from '../src/Components/ContentTwo';
 import Footer from '../src/Components/Footer';
 import Header from '../src/Components/Header';
 
-export default function Home() {
+function Home() {
   return (
     <>
       <Head>
@@ -22,3 +22,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
