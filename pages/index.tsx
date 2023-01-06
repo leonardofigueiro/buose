@@ -20,22 +20,22 @@ function Home() {
       </Head>
       <Header />
       <Carroussel />
-      <AnimationOnScroll animateIn="animate__fadeIn" initiallyVisible animateOnce>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
         <ContentOne />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeIn" initiallyVisible animateOnce>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
         <ContentTwo />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeIn" initiallyVisible animateOnce>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
         <ContentThree />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeIn" initiallyVisible animateOnce>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
         <ContentFour />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeIn" initiallyVisible animateOnce>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
         <ContentFive />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeIn" initiallyVisible animateOnce>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
         <ContentSix />
       </AnimationOnScroll>
       <Footer />
