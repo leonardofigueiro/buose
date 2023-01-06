@@ -2,17 +2,13 @@ import styled from 'styled-components';
 
 const TituloCard = styled.h2`
   color: var(--secondary14);
-  font-size: 2rem;
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 700;
 `;
 
 const SubTitle = styled.h3`
-  font-size: 1.3rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
 `;
 
 const Paragrafo = styled.p`

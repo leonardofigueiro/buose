@@ -1,33 +1,40 @@
 import styled from 'styled-components';
-import Icons from './Footer/Icons';
 import Socials from './Footer/Socials';
 import Mail from './Footer/Mail';
 import Phones from './Footer/Phones';
+import Logo from '../../public/logos/logoBuose.svg';
 
 
 const Section = styled.section`
   background: url('bg/bg_footer.png');
 `;
 
+const Nome = styled.span`
+  font-family: var(--fontDefault);
+  font-size: 36px;
+  font-weight: 300;
+  text-transform: uppercase;
+`;
 
+const SubNome = styled.span`
+  font-family: var(--fontDisplay);
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: uppercase;
+`;
 
 export default function Footer() {
   return (
     <footer>
-      <Section className="d-flex justify-content-center mt-4 p-5">
-        <div className='d-flex flex-column w-50 gap-3'>
-          <Icons/>
-          <Socials/>
-          <Mail/>
-          <Phones/>
-        </div>
-        <div>
-          Formulario
-        </div>
+      <Section className="d-flex flex-column align-items-center mt-4 p-4">
+        <Logo style={{width: '63'}}/>
+        <Nome>Buose</Nome>
+        <SubNome>Arquitetura | Interiores</SubNome>
+        <Socials />
+        <Mail />
+        <Phones />
+
       </Section>
-      <section>
-        linha 2
-      </section>
 
     </footer>
   );

@@ -4,28 +4,34 @@ import Checked from '../../../public/icons/checked.svg';
 import Smile from '../../../public/icons/smile.svg';
 
 const Number = styled.h4`
+color: var(--secondary11);
 font-family: var(--fontDefault);
-font-weight: 500;
-font-size: 2rem;
+font-weight: 700;
+font-size: 42px;
 `;
 
 const Description = styled.h5`
+color: var(--secondary11);
 font-family: var(--fontDefault);
-font-weight: 300;
-line-height: 170%;
-text-transform: uppercase;
+font-size: 18px;
+font-weight: 700;
+line-height: 110%;
 text-align: center;
-width: 200px;
-
+width: 170px;
 `;
 
+const Logo = styled.div`
+  height: 50px;
+  width: 50px;
+
+`;
 
 export default function Icons() {
   return (
     <div className='d-flex'>
       <div className='d-flex flex-column align-items-center'>
-        <Coffe />
-        <Number className='mt-3'>
+        <Logo><Coffe /></Logo>
+        <Number>
           785
         </Number>
         <Description>
@@ -33,8 +39,8 @@ export default function Icons() {
         </Description>
       </div>
       <div className='d-flex flex-column align-items-center'>
-        <Checked />
-        <Number className='mt-3'>
+        <Logo><Checked /></Logo>
+        <Number>
           785
         </Number>
         <Description>
@@ -42,8 +48,8 @@ export default function Icons() {
         </Description>
       </div>
       <div className='d-flex flex-column align-items-center'>
-        <Smile />
-        <Number className='mt-3'>
+        <Logo><Smile /></Logo>
+        <Number>
           785
         </Number>
         <Description>

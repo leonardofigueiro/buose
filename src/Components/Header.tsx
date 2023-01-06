@@ -1,12 +1,8 @@
 import styled from 'styled-components';
 import LogoBuose from '../../public/logos/logoBuose.svg';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
-const Cabecalho = styled.header`
-    background-color: var(--secondary7);
-    box-shadow: 0px 2px 4px rgba(19, 6, 6, 0.3);
-    display: flex;
-`;
 
 const DivLogo = styled.div`
     display: flex;
@@ -19,6 +15,7 @@ const Logo = styled.h1`
     font-size: 57px;
     line-height: 71px;
     letter-spacing: 0.115em;
+    transition: 1s;
 `;
 
 const Links = styled.a`
@@ -37,15 +34,25 @@ const Links = styled.a`
 `;
 
 function Header() {
+  const [small, setSmall] = useState(false);
+  
+  useEffect(() => {
+    if(typeof window !== 'undefined') {
+      window.addEventListener('scroll', () =>
+        setSmall(window.pageYOffset > 200)
+      );
+    }
+  }, []);
+  //{`fixed-top header ${small ? 'header_small' : 'fixed-top'}`}
   return (
-    <Cabecalho className='fixed-top'>
+    <header className='header'>
 
       <div className="container">
         <nav className="navbar navbar-expand-md ">
-          <DivLogo>
+          <DivLogo id='logo'>
             <Link className='navbar-brand' style={{ display: 'flex', gap: '10px' }} href={'/index'}>
-              <LogoBuose />
-              <Logo>buose</Logo>
+              <LogoBuose className={small ? 'logo_hidden' : 'logo_visible'} style={{transition: '1s'}}/>
+              <Logo className={small ? 'text_logo_hidden' : ''}>buose</Logo>
             </Link>
           </DivLogo>
           <div className="container-fluid justify-content-end align-content-start flex-grow-1 pe-2">
@@ -65,7 +72,7 @@ function Header() {
 
       </div>
 
-    </Cabecalho>
+    </header>
   );
 }
 

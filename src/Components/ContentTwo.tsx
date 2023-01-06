@@ -1,63 +1,62 @@
-import { Divisor, TituloCard } from './Commons/Cards';
 import styled from 'styled-components';
+import OnlineIcon from '../../public/icons/online.svg';
+import MedalIcon from '../../public/icons/dedicacao.svg';
+import Wallet from '../../public/icons/wallet.svg';
+import Project from '../../public/icons/projetos.svg';
 
-const ContainerAtuacao = styled.div`
-  background-color: var(--secondary11);
-  bottom: 0;
-  margin-left: 20%;
-  position: absolute;
-  text-align: center;
-  width: 60%;
+const CardTitle = styled.h4`
+  border-bottom: 3px solid var(--secondary6);
+  color: var(--secondary13); 
+  font-family: var(--fontDefault);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  width: 130px;
 `;
 
-const TituloAtuacao = styled.h4`
-  color: var(--secondary1);
-  border-bottom: 5px solid var(--primary7);
-  font-family: var(--fontDisplay);
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  
+const CardDescription = styled.p`
+  color: var(--secondary13);
+  font-family: var(--fontDefault);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 126.4%;
+  width: 198px;
 `;
+
 
 export default function ContentTwo() {
   return (
-    <section className="container-fluid p-5">
-      <TituloCard>Áreas de atuação</TituloCard>
-      <Divisor className='mt-4 mb-4'/>
-      <div className="d-flex gap-4 justify-content-center">
+    <section className="container p-2">
+      <div className="d-flex gap-4 justify-content-center flex-wrap">
 
-        <div className='position-relative'>
-          <img className='img-fluid' src='images/content2/residencial.jpg' alt="" />
-          <ContainerAtuacao className="mb-3 p-3">
-            <TituloAtuacao>
-              Residencial
-            </TituloAtuacao>
-          </ContainerAtuacao>
+        <div>
+          <div><OnlineIcon/></div>
+          <CardTitle className='mt-2'>100% online</CardTitle>
+          <CardDescription>
+            O projeto é 100% online e entregue rapidamente
+          </CardDescription>
         </div>
-        <div className='position-relative'>
-          <img className='img-fluid' src='images/content2/comercial.jpg' alt="" />
-          <ContainerAtuacao className="mb-3 p-3">
-            <TituloAtuacao>
-              Comercial
-            </TituloAtuacao>
-          </ContainerAtuacao>
+        <div>
+          <MedalIcon />
+          <CardTitle className='mt-2'>Dedicação</CardTitle>
+          <CardDescription>
+            Conte com um arquiteto experiente para tirar
+            todas as suas dúvidas durante a execução.
+          </CardDescription>
         </div>
-        <div className='position-relative'>
-          <img className='img-fluid' src='images/content2/interiores.jpg' alt="" />
-          <ContainerAtuacao className="mb-3 p-3">
-            <TituloAtuacao>
-              Interiores
-            </TituloAtuacao>
-          </ContainerAtuacao>
+        <div>
+          <Wallet />
+          <CardTitle className='mt-2'>Preço justo</CardTitle>
+          <CardDescription>
+            Nosso preço cabe no seu orçamento.
+          </CardDescription>
         </div>
-        <div className='position-relative'>
-          <img className='img-fluid' src='images/content2/reformas.jpg' alt="" />
-          <ContainerAtuacao className="mb-3 p-3">
-            <TituloAtuacao>
-              Reformas
-            </TituloAtuacao>
-          </ContainerAtuacao>
+        <div>
+          <Project />
+          <CardTitle className='mt-2'>Projetos</CardTitle>
+          <CardDescription>
+            Conte com plantas humanizadas e imagens realistas.
+          </CardDescription>
         </div>
 
       </div>

@@ -5,7 +5,7 @@ import Linkedin from '../../../public/icons/linkedin.svg';
 
 export default function Socials() {
   return (
-    <div className="d-flex gap-2">
+    <div className="d-flex gap-2 mt-4">
       <a href='#'><Facebook/></a>
       <a href='#'><Instagram/></a>
       <a href='#'><Twitter/></a>
