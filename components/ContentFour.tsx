@@ -1,5 +1,10 @@
+import Image from 'next/image';
 import { Divisor, TituloCard } from './Commons/Cards';
 import styled from 'styled-components';
+import Residencial from '../public/images/content2/residencial.webp';
+import Comercial from '../public/images/content2/comercial.webp';
+import Interiores from '../public/images/content2/interiores.webp';
+import Reformas from '../public/images/content2/reformas.webp';
 
 const ContainerAtuacao = styled.div`
   background-color: var(--secondary11);
@@ -25,10 +30,10 @@ export default function ContentFour() {
     <section className="container-fluid p-5">
       <TituloCard className='text-center'>Áreas de atuação</TituloCard>
       <Divisor className='mt-4 mb-4'/>
-      <div className="d-flex gap-4 justify-content-center flex-wrap">
+      <div className="d-flex gap-4 justify-content-center flex-wrap flex-lg-nowrap">
 
         <div className='position-relative'>
-          <img className='img-fluid' src='images/content2/residencial.jpg' alt="" />
+          <Image className='img-fluid' src={Residencial} alt="" />
           <ContainerAtuacao className="mb-3 p-3">
             <TituloAtuacao>
               Residencial
@@ -36,7 +41,7 @@ export default function ContentFour() {
           </ContainerAtuacao>
         </div>
         <div className='position-relative'>
-          <img className='img-fluid' src='images/content2/comercial.jpg' alt="" />
+          <Image className='img-fluid' src={Comercial} alt="" />
           <ContainerAtuacao className="mb-3 p-3">
             <TituloAtuacao>
               Comercial
@@ -44,7 +49,7 @@ export default function ContentFour() {
           </ContainerAtuacao>
         </div>
         <div className='position-relative'>
-          <img className='img-fluid' src='images/content2/interiores.jpg' alt="" />
+          <Image className='img-fluid' src={Interiores} alt="" />
           <ContainerAtuacao className="mb-3 p-3">
             <TituloAtuacao>
               Interiores
@@ -52,7 +57,7 @@ export default function ContentFour() {
           </ContainerAtuacao>
         </div>
         <div className='position-relative'>
-          <img className='img-fluid' src='images/content2/reformas.jpg' alt="" />
+          <Image className='img-fluid' src={Reformas} alt="" />
           <ContainerAtuacao className="mb-3 p-3">
             <TituloAtuacao>
               Reformas

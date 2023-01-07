@@ -1,14 +1,12 @@
 
 import Head from 'next/head';
-import Carroussel from '../src/Components/Carroussel';
-import ContentOne from '../src/Components/ContentOne';
-import Footer from '../src/Components/Footer';
-import Header from '../src/Components/Header';
-import ContentTwo from '../src/Components/ContentTwo';
-import ContentThree from '../src/Components/ContentThree';
-import ContentFour from '../src/Components/ContentFour';
-import ContentFive from '../src/Components/ContentFive';
-import ContentSix from '../src/Components/ContentSix';
+import Carroussel from '../components/Carroussel';
+import ContentOne from '../components/ContentOne';
+import ContentTwo from '../components/ContentTwo';
+import ContentThree from '../components/ContentThree';
+import ContentFour from '../components/ContentFour';
+import ContentFive from '../components/ContentFive';
+import ContentSix from '../components/ContentSix';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
@@ -18,27 +16,29 @@ function Home() {
       <Head>
         <title>Buose | Início</title>
       </Head>
-      <Header />
       <Carroussel />
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce initiallyVisible>
         <ContentOne />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce initiallyVisible>
         <ContentTwo />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
+      
+      <AnimationOnScroll  animateIn="animate__fadeInUp" animateOnce initiallyVisible>
         <ContentThree />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
+      
+      <AnimationOnScroll className='container' animateIn="animate__fadeInUp" animateOnce initiallyVisible>
         <ContentFour />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
+       
+      <AnimationOnScroll className='container' animateIn="animate__fadeInUp" animateOnce initiallyVisible>
         <ContentFive />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
+      
+      <AnimationOnScroll className='container' animateIn="animate__fadeInUp" animateOnce initiallyVisible>
         <ContentSix />
       </AnimationOnScroll>
-      <Footer />
     </>
   );
 }

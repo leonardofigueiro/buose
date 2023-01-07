@@ -1,8 +1,11 @@
-
-
+import Image from 'next/image';
+import Carolsel1 from '../public/images/carousel/carousel1.webp';
+import Carolsel2 from '../public/images/carousel/carousel2.webp';
+import Carolsel3 from '../public/images/carousel/carousel3.webp';
 
 export default function Carroussel() {
   return (
+
     <div id="carouselExampleIndicators" className="carousel slide mt-3">
       <div className="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -11,13 +14,13 @@ export default function Carroussel() {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src='images/carousel/carousel1.webp' className="d-block w-100" alt="..." />
+          <Image src={Carolsel1} className="d-block w-100 h-100" alt='Imagem realista de uma sala com sofá e mesa de centro em madeira rústica' priority/>
         </div>
         <div className="carousel-item">
-          <img src='images/carousel/carousel2.webp' className="d-block w-100" alt="..." />
+          <Image src={Carolsel2} className="d-block w-100 h-100" alt='Imagem realista de uma casa moderna com piscina' priority/>
         </div>
         <div className="carousel-item">
-          <img src='images/carousel/carousel3.webp' className="d-block w-100" alt="..." />
+          <Image src={Carolsel3} className="d-block w-100 h-100" alt='Imagem realista de uma casa moderna com piscina' priority/>
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -29,5 +32,10 @@ export default function Carroussel() {
         <span className="visually-hidden">Next</span>
       </button>
     </div>
+
+
+
+
+
   );
 }

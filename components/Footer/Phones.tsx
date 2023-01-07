@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Phone from '../../../public/icons/phone.svg';
-import Whats from '../../../public/icons/whatsapp.svg';
+import Phone from '../../public/icons/phone.svg';
+import Whats from '../../public/icons/whatsapp.svg';
 
 const DivNumeros = styled.div`
   align-items: center;
@@ -17,7 +17,7 @@ const Tel = styled.h5`
 
 export default function Phones() {
   return (
-    <DivNumeros className='d-flex gap-4 justify-content-center'>
+    <DivNumeros className='d-flex gap-4 justify-content-center flex-wrap flex-md-nowrap'>
       <div className='d-flex gap-1 align-items-end'>
         <Phone/>
         <Tel>(65)99999-9999</Tel>

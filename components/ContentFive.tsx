@@ -19,12 +19,15 @@ const Lista = styled.ul`
     }
 `;
 
+const Img = styled.img`
+  width: 100%;
+`;
 
 export default function ContentFive() {
   return (
-    <Section className='mt-4 p-5 d-flex justify-content-center container gap-5'>
+    <Section className='mt-4 p-5 d-flex justify-content-center container gap-5 flex-wrap-reverse flex-lg-nowrap'>
       <div className='d-flex flex-column align-items-end gap-3'>
-        <TituloCard className='text-end'>Pré-projeto ao seu alcance</TituloCard>
+        <TituloCard>Pré-projeto ao seu alcance</TituloCard>
         <SubTitle className='text-end'>Com um projeto profissional, você:</SubTitle>
 
         <Lista className='text-end d-flex flex-column gap-2'>
@@ -45,7 +48,7 @@ export default function ContentFive() {
         </Link>
       </div>
       <div className='position-relative'>
-        <img className='img-fluid' src='images/business.png' alt="" style={{ width: '80%', zIndex: '10' }} />
+        <Img className='img-fluid' src='images/business.png' alt="" style={{ width: '80%', zIndex: '10' }} />
       </div>
 
 

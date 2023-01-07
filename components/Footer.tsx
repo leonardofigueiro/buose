@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Socials from './Footer/Socials';
 import Mail from './Footer/Mail';
 import Phones from './Footer/Phones';
-import Logo from '../../public/logos/logoBuose.svg';
+import Logo from '../public/logos/logoBuose.svg';
 
 
 const Section = styled.section`

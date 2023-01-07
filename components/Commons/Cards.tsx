@@ -4,11 +4,26 @@ const TituloCard = styled.h2`
   color: var(--secondary14);
   font-size: 40px;
   font-weight: 700;
+  max-width: 400px;
+  text-align: left;
+  @media (max-width: 540px) {
+    font-size: 30px;
+    text-align: center;
+    max-width: 100%;
+  }
+  @media (max-width: 768px) {
+    text-align: center;
+    max-width: 100%;
+  }
 `;
 
 const SubTitle = styled.h3`
   font-size: 20px;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const Paragrafo = styled.p`
