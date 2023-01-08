@@ -8,6 +8,7 @@ import ContentFour from '../components/ContentFour';
 import ContentFive from '../components/ContentFive';
 import ContentSix from '../components/ContentSix';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import Form from '../components/Form';
 
 
 function Home() {
@@ -17,27 +18,30 @@ function Home() {
         <title>Buose | Início</title>
       </Head>
       <Carroussel />
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce initiallyVisible>
+      <AnimationOnScroll animateIn="animate__fadeIn" animateOnce initiallyVisible>
         <ContentOne />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce initiallyVisible>
+      <AnimationOnScroll animateIn="animate__fadeIn" animateOnce initiallyVisible>
         <ContentTwo />
       </AnimationOnScroll>
       
-      <AnimationOnScroll  animateIn="animate__fadeInUp" animateOnce initiallyVisible>
+      <AnimationOnScroll  animateIn="animate__fadeIn" animateOnce initiallyVisible>
         <ContentThree />
       </AnimationOnScroll>
       
-      <AnimationOnScroll className='container' animateIn="animate__fadeInUp" animateOnce initiallyVisible>
+      <AnimationOnScroll className='container' animateIn="animate__fadeIn" animateOnce initiallyVisible>
         <ContentFour />
       </AnimationOnScroll>
        
-      <AnimationOnScroll className='container' animateIn="animate__fadeInUp" animateOnce initiallyVisible>
+      <AnimationOnScroll className='container' animateIn="animate__fadeIn" animateOnce initiallyVisible>
         <ContentFive />
       </AnimationOnScroll>
       
-      <AnimationOnScroll className='container' animateIn="animate__fadeInUp" animateOnce initiallyVisible>
+      <AnimationOnScroll className='container' animateIn="animate__fadeIn" animateOnce initiallyVisible>
         <ContentSix />
+      </AnimationOnScroll>
+      <AnimationOnScroll className='container' animateIn="animate__fadeIn" animateOnce initiallyVisible>
+        <Form />
       </AnimationOnScroll>
     </>
   );
