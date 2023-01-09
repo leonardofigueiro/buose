@@ -1,6 +1,5 @@
 import { FormEvent, useState } from 'react';
 import InputMask from 'react-input-mask';
-import emailjs from '@emailjs/browser';
 import { Button, Input, Label, TextArea, Title } from './FormComponents/FormComponents';
 import axios from 'axios';
 
@@ -48,7 +47,7 @@ export default function Form() {
 
 
   return (
-    <section className=' container d-flex flex-wrap flex-lg-nowrap mt-5 justify-content-center align-items-center'>
+    <section className=' container d-flex flex-wrap flex-lg-nowrap mt-5 justify-content-center align-items-center' id='formulario'>
       <Title>
         <b>Não perca tempo, </b>
         entre em contado agora mesmo!

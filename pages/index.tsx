@@ -14,9 +14,6 @@ import Form from '../components/Form';
 function Home() {
   return (
     <>
-      <Head>
-        <title>Buose | Início</title>
-      </Head>
       <Carroussel />
       <AnimationOnScroll animateIn="animate__fadeIn" animateOnce initiallyVisible>
         <ContentOne />

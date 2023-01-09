@@ -7,7 +7,7 @@ export default function Socials() {
   return (
     <div className="d-flex gap-2 mt-4">
       <a href='#'><Facebook/></a>
-      <a href='#'><Instagram/></a>
+      <a target='_blank' href='https://www.instagram.com/buosearquitetura/' rel="noreferrer"><Instagram/></a>
       <a href='#'><Twitter/></a>
       <a href='#'><Linkedin/></a>
     </div>

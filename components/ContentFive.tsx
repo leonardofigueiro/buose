@@ -44,11 +44,11 @@ export default function ContentFive() {
             agreva valor ao seu imóvel
           </li>
         </Lista>
-        <Link className='link' style={{textDecoration: 'none'}} href='#'>Conheça mais vantagens
+        <Link className='link' style={{textDecoration: 'none'}} href='/comofunciona'>Conheça mais vantagens
         </Link>
       </div>
       <div className='position-relative'>
-        <Img className='img-fluid' src='images/business.png' alt="" style={{ width: '80%', zIndex: '10' }} />
+        <Img className='img-fluid' src='images/business.png' alt="Imagem de pessoas efetuando cálculos de custos" style={{ width: '80%', zIndex: '10' }} />
       </div>
 
 
