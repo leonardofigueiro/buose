@@ -57,6 +57,13 @@ body {
   font-family: var(--fontDefault);
   text-decoration: none;
 }
+.header a:hover {
+  border-bottom: 1px dotted;
+}
+
+.ativo {
+  border-bottom: 1px dotted;
+}
 
 .logo_hidden {
   font-size: 5px;

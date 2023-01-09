@@ -2,6 +2,7 @@ import { FormEvent, useState } from 'react';
 import InputMask from 'react-input-mask';
 import emailjs from '@emailjs/browser';
 import { Button, Input, Label, TextArea, Title } from './FormComponents/FormComponents';
+import axios from 'axios';
 
 
 export default function Form() {
@@ -13,23 +14,28 @@ export default function Form() {
   const [email, setEmail] = useState('');
   const [msg, setMsg] = useState('');
 
-  const Formulario = {
-    name: nome,
-    last_name: sobrenome,
-    tel: tel,
-    email: email,
-    msg:msg
+  const data = {
+    service_id: 'service_3snekti',
+    template_id: 'template_t5rhirh',
+    user_id: 'XogwfPiQvNhjKK6Dd',
+    template_params:{
+      'name':nome,
+      'last_name':sobrenome,
+      'tel':tel,
+      'email':email,
+      'msg':msg
+    }
   };
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const serviceId = 'service_3snekti';
-    console.log(Formulario);
-    emailjs.send(serviceId, 'template_t5rhirh', Formulario, 'AGY6h0tPU-wbE9Dwo')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
+
+    axios.post('https://api.emailjs.com/api/v1.0/email/send', data)
+      .then(() => {
+        alert('Seu e-mail foi enviado! Em breve retornaremos.');
+      })
+      .catch((err) => {
+        console.log(JSON.stringify(err));
       })
       .then(() => {
         setNome('');

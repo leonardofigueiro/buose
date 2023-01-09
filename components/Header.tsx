@@ -53,6 +53,12 @@ function Header() {
           <div className="item">
             <Link href={'/projetos'}>Projetos</Link>
           </div>
+          <div className="item">
+            <Link href={'/comofunciona'}>Como funciona</Link>
+          </div>
+          <div className="item">
+            <Link href={'/about'}>Sobre nós</Link>
+          </div>
         </div>
 
         {/* Botão de ativação do modal */}
