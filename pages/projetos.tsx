@@ -22,21 +22,21 @@ export default function Projetos() {
             <>
               <Image
                 key={image.id}
-                className='img-thumbnail'
+                className='img-thumbnail pointer'
                 width={330} height={190}
                 src={`/projetos/thumb/${image.src}_Easy-Resize.com.jpg`}
                 alt='Imagem realista de uma bela casa'
                 onClick={() => {
                   setToggler(!toggler);
                   setId(image.id);
-                
                 }}
+                
               />
             </>);
         })}
         {toggler && (
           <Lightbox
-            mainSrc={`projetos/${images[id as number - 1].src}.jpg`}
+            mainSrc={`projetos/${images[id as number - 1].src}.webp`}
             onCloseRequest={() => setToggler(!toggler)}
             onImageLoad={() => {
               window.dispatchEvent(new Event('resize'));

@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import { SubTitle, TituloCard } from './Commons/Cards';
-
+import Image from 'next/image';
+import Business from '../public/images/business.png';
 
 const Section = styled.section`
   color: var(--secondary14);
@@ -48,7 +49,7 @@ export default function ContentFive() {
         </Link>
       </div>
       <div className='position-relative'>
-        <Img className='img-fluid' src='images/business.png' alt="Imagem de pessoas efetuando cálculos de custos" style={{ width: '80%', zIndex: '10' }} />
+        <Image className='img-fluid' src={Business} alt="Imagem de pessoas efetuando cálculos de custos" style={{ width: '80%', zIndex: '10' }} />
       </div>
 
 

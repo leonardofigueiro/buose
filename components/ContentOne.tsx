@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import { SubTitle, TituloCard } from './Commons/Cards';
+import Image from 'next/image';
+import Content1 from '../public/images/content1.png';
 
 
 const Section = styled.section`
@@ -29,7 +31,7 @@ export default function ContentOne() {
     <Section className='mt-4 d-flex justify-content-center gap-4 flex-wrap flex-md-nowrap flex-lg-nowrap'>
 
       <div className='d-flex justify-content-end'>
-        <Img className='img-fluid' src='images/content1.png' alt="Imagem realista de uma bela casa moderna" />
+        <Image className='img-fluid' src={Content1} alt="Imagem realista de uma bela casa moderna" />
       </div>
       <DivTexto className='d-flex flex-column'>
         <TituloCard>Quer transformar seu ambiente com ajuda profissional?</TituloCard>
