@@ -1,20 +1,10 @@
 import { Divisor, TituloCard } from '../components/Commons/Cards';
-import styled from 'styled-components';
 import { images } from '../src/images';
 import { useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import Image from 'next/image';
 
-
-const Imagem = styled.img`
-  max-width: 330px;
-  max-height: 190px;
-  width: auto;
-  height: auto;
-  &:hover{
-    cursor:pointer;
-  }
-`;
 
 export default function Projetos() {
 
@@ -30,12 +20,12 @@ export default function Projetos() {
         {images.map((image) => {
           return (
             <>
-              <Imagem
+              <Image
                 key={image.id}
                 className='img-thumbnail'
                 width={330} height={190}
                 src={`/projetos/thumb/${image.src}_Easy-Resize.com.jpg`}
-                alt='Imagem realista'
+                alt='Imagem realista de uma bela casa'
                 onClick={() => {
                   setToggler(!toggler);
                   setId(image.id);

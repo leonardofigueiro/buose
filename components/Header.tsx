@@ -82,7 +82,8 @@ function Header() {
           </div>
 
           {/* Botão de ativação do modal */}
-          <div className="mobile-toggler d-lg-none d-md-none">
+          <div className="d-lg-none d-md-none">
+          
             <a data-bs-toggle="offcanvas" href="#menuLateral" role='button' aria-controls="menuLateral">
               <Menu />
             </a>

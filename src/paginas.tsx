@@ -12,9 +12,9 @@ export const paginas = [{
 },
 {
   id: 3,
-  nome: 'Como funciona',
-  caminho: '/comofunciona',
-  titulo: 'Buose | Como Funciona o projeto online'
+  nome: 'Produtos',
+  caminho: '/produtos',
+  titulo: 'Buose | Produtos'
 },
 {
   id: 4,
