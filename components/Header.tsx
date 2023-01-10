@@ -75,7 +75,7 @@ function Header() {
           {/* Links da página principal */}
           <div className="navb-items gap-4 d-none d-md-flex">
             {paginas.map((pagina) => {
-              return (<div key={pagina.id} className="item">
+              return (<div key={pagina.id.toString()} className="item">
                 <Link className={Router.pathname === pagina.caminho ? 'ativo' : ''} href={pagina.caminho}>{pagina.nome}</Link>
               </div>);
             })}

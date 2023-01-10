@@ -38,7 +38,7 @@ export default function MenuLateral() {
       </div>
       <div className="offcanvas-body d-flex flex-column gap-4" data-bs-dismiss="offcanvas">
         {paginas.map((pagina) => {
-          return (<Item key={pagina.id} className="item">
+          return (<Item key={pagina.id.toString()} className="item">
             <Link 
               className={Router.pathname === pagina.caminho ? 'ativo' : ''} 
               href={pagina.caminho}

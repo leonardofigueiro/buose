@@ -1,5 +1,4 @@
 
-import Head from 'next/head';
 import Carroussel from '../components/Carroussel';
 import ContentOne from '../components/ContentOne';
 import ContentTwo from '../components/ContentTwo';
