@@ -2,6 +2,9 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import Home from '../../public/icons/home.svg';
 import Projeto from '../../public/icons/projeto.svg';
+import { paginas } from '../../src/paginas';
+import { useRouter } from 'next/router';
+
 
 
 
@@ -28,6 +31,7 @@ const Item = styled.div`
 `;
 
 export default function MenuLateral() {
+  const Router = useRouter();
   return (
     <OffCanvas className="offcanvas offcanvas-end" tabIndex={-1} id="menuLateral" aria-labelledby="menuLateralLabel">
       <div className="offcanvas-header">
@@ -35,15 +39,12 @@ export default function MenuLateral() {
         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div className="offcanvas-body d-flex flex-column gap-4">
-        <Item>
-          <Home/>
-          <Link href={'/'}> Home </Link>
-        </Item>
-        <Item>
-          <Projeto/>
-          <Link href={'/projetos'}> Projetos </Link>
-        </Item>
-          
+        {paginas.map((pagina) => {
+          return (<Item key={pagina.id} className="item">
+            <Link className={Router.pathname === pagina.caminho ? 'ativo' : ''} href={pagina.caminho}>{pagina.nome}</Link>
+          </Item>);
+        })}
+
       </div>
     </OffCanvas>
 

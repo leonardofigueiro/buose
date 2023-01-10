@@ -7,6 +7,9 @@
   --primary4: #95AF9E;
   --primary6: #739880;
   --primary7: #618A70;
+  --primary9: #447054;
+
+
   --primary11: #295237;
   --primary12: #1D432B;
 
@@ -49,7 +52,7 @@ body {
   transition: 1s;
   padding: 10px 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 10;
 }
 
 .header a {

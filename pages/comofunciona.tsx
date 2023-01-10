@@ -1,7 +1,16 @@
+import Cards from '../components/ComoFunciona/Cards';
+import Processo from '../components/ComoFunciona/Processo';
+
+
+
 
 
 export default function ProjetoOnline() {
+
   return (
-    <h1 className="mt-4">EM CONSTRUÇÃO</h1>
+    <>
+      <Cards/>
+      <Processo/>
+    </>
   );
 }

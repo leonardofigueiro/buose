@@ -6,21 +6,21 @@ import Carolsel3 from '../public/images/carousel/carousel3.webp';
 export default function Carroussel() {
   return (
 
-    <div id="carouselExampleIndicators" className="carousel slide mt-3">
+    <div id="carouselExampleIndicators" className="carousel slide mt-3" data-bs-ride="carousel">
       <div className="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div className="carousel-inner">
-        <div className="carousel-item active">
-          <Image src={Carolsel1} className="d-block w-100 h-100" alt='Imagem realista de uma sala com sofá e mesa de centro em madeira rústica' priority/>
-        </div>
         <div className="carousel-item">
           <Image src={Carolsel2} className="d-block w-100 h-100" alt='Imagem realista de uma casa moderna com piscina' priority/>
         </div>
         <div className="carousel-item">
           <Image src={Carolsel3} className="d-block w-100 h-100" alt='Imagem realista de uma casa moderna com piscina' priority/>
+        </div>
+        <div className="carousel-item active">
+          <Image src={Carolsel1} className="d-block w-100 h-100" alt='Imagem realista de uma sala com sofá e mesa de centro em madeira rústica' priority/>
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
