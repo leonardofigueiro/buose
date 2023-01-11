@@ -1,7 +1,10 @@
+import ContentFour from '../components/ContentFour';
 
 
 export default function About() {
   return (
-    <h1 className="mt-4">EM CONSTRUÇÃO</h1>
+   
+    <ContentFour />
+   
   );
 }

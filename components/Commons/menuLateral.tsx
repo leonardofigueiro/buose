@@ -7,8 +7,7 @@ import { useRouter } from 'next/router';
 
 
 const Titulo = styled.h5`
-  font-size: 26px;
-  text-transform: uppercase;
+  font-size: 16px;
 
 `;
 
@@ -20,11 +19,10 @@ const Item = styled.div`
   align-items: center;
   border-bottom: 1px dotted;
   display: flex;
-  
   gap: 10px;
   width: 100%;
   & a {
-    font-size: 22px;
+    font-size: 0.8rem;
   }
 `;
 

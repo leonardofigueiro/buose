@@ -40,16 +40,16 @@ function Header() {
   let pageTitle;
   switch (Router.pathname) {
     case paginas[0].caminho:
-      pageTitle = paginas[0].nome;
+      pageTitle = paginas[0].titulo;
       break;
     case paginas[1].caminho:
-      pageTitle = paginas[1].nome;
+      pageTitle = paginas[1].titulo;
       break;
     case paginas[2].caminho:
-      pageTitle = paginas[2].nome;
+      pageTitle = paginas[2].titulo;
       break;
     case paginas[3].caminho:
-      pageTitle = paginas[3].nome;
+      pageTitle = paginas[3].titulo;
       break;
   }
 
@@ -65,7 +65,7 @@ function Header() {
       <header className='header fixed-top'>
         <div className="container d-flex justify-content-between align-items-center">
           <DivLogo id='logo' className='navb-logo'>
-            <Link className='navbar-brand' style={{ display: 'flex', gap: '10px' }} href={'/index'}>
+            <Link className='navbar-brand' style={{ display: 'flex', gap: '10px' }} href={'/'}>
               <LogoBuose className={small ? 'logo_hidden' : 'logo_visible'} style={{ transition: '1s' }} />
               <Logo className={small ? 'text_logo_hidden' : ''}>buose</Logo>
             </Link>
@@ -85,7 +85,7 @@ function Header() {
           <div className="d-lg-none d-md-none">
           
             <a data-bs-toggle="offcanvas" href="#menuLateral" role='button' aria-controls="menuLateral">
-              <Menu />
+              <Menu/>
             </a>
 
           </div>

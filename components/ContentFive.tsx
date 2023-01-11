@@ -20,6 +20,12 @@ const Lista = styled.ul`
     }
 `;
 
+const DivImagem = styled.div`
+  @media(max-width: 540px){
+    display: none;
+  }
+ `;
+
 export default function ContentFive() {
   return (
     <Section className='mt-4 p-5 d-flex justify-content-center container gap-5 flex-wrap-reverse flex-lg-nowrap'>
@@ -44,9 +50,9 @@ export default function ContentFive() {
         <Link className='link' style={{textDecoration: 'none'}} href='/comofunciona'>Conheça mais vantagens
         </Link>
       </div>
-      <div className='position-relative'>
-        <Image className='img-fluid' src={Business} alt="Imagem de pessoas efetuando cálculos de custos" style={{ width: '80%', zIndex: '10' }} />
-      </div>
+      <DivImagem className='position-relative'>
+        <Image className='img-fluid' src={Business} alt="Imagem de pessoas efetuando cálculos de custos" />
+      </DivImagem>
 
 
 

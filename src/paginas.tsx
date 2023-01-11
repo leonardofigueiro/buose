@@ -2,7 +2,7 @@ export const paginas = [{
   id: 1,
   nome: 'Inicio',
   caminho: '/',
-  titulo: 'Buose | Inicio'
+  titulo: 'Buose Arquitura Online | Inicio'
 },
 {
   id: 2,
@@ -12,9 +12,9 @@ export const paginas = [{
 },
 {
   id: 3,
-  nome: 'Produtos',
-  caminho: '/produtos',
-  titulo: 'Buose | Produtos'
+  nome: 'Soluções',
+  caminho: '/solucoes-em-arquitetura',
+  titulo: 'Buose | Soluções em arquitetura'
 },
 {
   id: 4,

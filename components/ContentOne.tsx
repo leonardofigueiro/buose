@@ -23,15 +23,21 @@ const DivTexto =styled.div`
   }
  `;
 
+const DivImagem = styled.div`
+  @media(max-width: 540px){
+    display: none;
+  }
+ `;
+
 export default function ContentOne() {
   return (
     <Section className='mt-4 d-flex justify-content-center gap-4 flex-wrap flex-md-nowrap flex-lg-nowrap'>
 
-      <div className='d-flex justify-content-end'>
-        <Image className='img-fluid' src={Content1} alt="Imagem realista de uma bela casa moderna" />
-      </div>
+      <DivImagem >
+        <Image src={Content1} alt="Imagem realista de uma bela casa moderna" />
+      </DivImagem>
       <DivTexto className='d-flex flex-column'>
-        <TituloCard>Quer transformar seu ambiente com ajuda profissional?</TituloCard>
+        <TituloCard>Quer transformar seu ambiente com ajuda profissional de arquitetura, Online?</TituloCard>
         <SubTitle>Aqui você consegue,<br /> e sem gastar muito!</SubTitle>
         <Link className='link' href='/comofunciona' style={{textDecoration: 'none', width: '200px'}}>
             saiba mais

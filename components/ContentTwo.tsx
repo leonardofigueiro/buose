@@ -57,7 +57,7 @@ export default function ContentTwo() {
         <MedalIcon />
         <CardTitle className='mt-2'>Dedicação</CardTitle>
         <CardDescription>
-          Conte com um arquiteto experiente para tirar
+          Conte com a consultoria de uma arquiteta experiente para tirar
           todas as suas dúvidas durante a execução.
         </CardDescription>
       </div>
