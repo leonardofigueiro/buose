@@ -26,8 +26,11 @@ export default function Form() {
     }
   };
 
+
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    
 
     axios.post('https://api.emailjs.com/api/v1.0/email/send', data)
       .then(() => {
@@ -61,8 +64,11 @@ export default function Form() {
               name="name"
               id="name"
               value={nome}
-              onChange={(field) => setNome(field.target.value)}
+              onChange={(field) => {
+                setNome(field.target.value);
+              }}
               required
+              
             />
           </div>
           <div className='d-flex flex-column'>

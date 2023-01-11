@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import Image from 'next/image';
+import '../styles/Modal.module.scss';
 
 
 export default function Projetos() {
@@ -21,16 +22,15 @@ export default function Projetos() {
           return (
             <>
               <Image
-                key={image.id}
+                key={String(image.id)}
                 className='img-thumbnail pointer'
                 width={330} height={190}
-                src={`/projetos/thumb/${image.src}_Easy-Resize.com.jpg`}
+                src={`/projetos/thumb/${image.src}_Easy-Resize.com.webp`}
                 alt='Imagem realista de uma bela casa'
                 onClick={() => {
                   setToggler(!toggler);
                   setId(image.id);
                 }}
-                
               />
             </>);
         })}
@@ -45,10 +45,6 @@ export default function Projetos() {
           />)}
 
       </div>
-
-
-
-
     </section>
   );
 }
