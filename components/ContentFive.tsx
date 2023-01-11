@@ -20,10 +20,6 @@ const Lista = styled.ul`
     }
 `;
 
-const Img = styled.img`
-  width: 100%;
-`;
-
 export default function ContentFive() {
   return (
     <Section className='mt-4 p-5 d-flex justify-content-center container gap-5 flex-wrap-reverse flex-lg-nowrap'>

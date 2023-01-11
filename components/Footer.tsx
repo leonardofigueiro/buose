@@ -6,7 +6,7 @@ import Logo from '../public/logos/logoBuose.svg';
 
 
 const Section = styled.section`
-  background: url('bg/bg_footer.png');
+  background: url('bg/bg_footer.webp');
 `;
 
 const Nome = styled.span`

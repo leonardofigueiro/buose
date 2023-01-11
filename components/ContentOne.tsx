@@ -15,9 +15,6 @@ const Section = styled.section`
   }
 `;
 
-const Img = styled.img`
-  width: 100%;
-`;
 const DivTexto =styled.div`
   gap: 30px;
   @media (max-width: 540px) {
