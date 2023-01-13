@@ -1,4 +1,4 @@
-import { SubTitle, TituloCard } from '../../components/Commons/Cards';
+import { SubTitle, TituloCard } from '../Commons/Cards';
 import styled from 'styled-components';
 import 'react-image-lightbox/style.css';
 import OnlineIcon from '../../public/icons/online.svg';

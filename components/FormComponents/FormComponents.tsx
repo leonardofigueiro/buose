@@ -51,4 +51,13 @@ const Button = styled.button`
   width: 50%;
 `;
 
-export { Title, Button, TextArea, Input, Label};
+const Select = styled.select`
+  background: var(--secondary1);
+  border: 1px solid var(--secondary2);
+  border-radius: 10px;
+  height: 56px;
+  padding: 0 0 0 10px;
+  width: 100%;
+`;
+
+export { Title, Button, TextArea, Input, Label, Select};

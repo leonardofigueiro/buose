@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const TituloCard = styled.h2`
-  color: var(--secondary14);
+  color: var(--secondary12);
   font-size: 40px;
   font-weight: 700;
   max-width: 400px;

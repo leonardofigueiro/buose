@@ -27,8 +27,8 @@ const TituloAtuacao = styled.h4`
 
 export default function ContentFour() {
   return (
-    <section className="container-fluid p-5">
-      <TituloCard className='text-center'>Áreas de atuação</TituloCard>
+    <section className="container-fluid p-5 d-flex flex-column align-items-center">
+      <TituloCard style={{textAlign: 'center'}}>Áreas de atuação</TituloCard>
       <Divisor className='mt-4 mb-4'/>
       <div className="d-flex gap-4 justify-content-center flex-wrap flex-lg-nowrap">
 

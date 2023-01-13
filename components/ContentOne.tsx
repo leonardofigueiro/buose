@@ -39,7 +39,7 @@ export default function ContentOne() {
       <DivTexto className='d-flex flex-column'>
         <TituloCard>Quer transformar seu ambiente com ajuda profissional de arquitetura, Online?</TituloCard>
         <SubTitle>Aqui você consegue,<br /> e sem gastar muito!</SubTitle>
-        <Link className='link' href='/comofunciona' style={{textDecoration: 'none', width: '200px'}}>
+        <Link className='link' href='/solucoes' style={{textDecoration: 'none', width: '200px'}}>
             saiba mais
         </Link>
       </DivTexto>

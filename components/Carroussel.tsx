@@ -14,13 +14,13 @@ export default function Carroussel() {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item">
-          <Image src={Carolsel2} className="d-block w-100 h-100" alt='Imagem realista de uma casa moderna com piscina' priority/>
+          <Image src={Carolsel2} alt='Imagem realista de uma casa moderna com piscina' style={{width: '100vw', height: 'auto'}} />
         </div>
         <div className="carousel-item">
-          <Image src={Carolsel3} className="d-block w-100 h-100" alt='Imagem realista de uma casa moderna com piscina' priority/>
+          <Image src={Carolsel3}  alt='Imagem realista de uma casa moderna com piscina' style={{width: '100vw', height: 'auto'}}/>
         </div>
         <div className="carousel-item active">
-          <Image src={Carolsel1} className="d-block w-100 h-100" alt='Imagem realista de uma sala com sofá e mesa de centro em madeira rústica' priority/>
+          <Image src={Carolsel1} alt='Imagem realista de uma sala com sofá e mesa de centro em madeira rústica' style={{width: '100vw', height: 'auto'}} priority/>
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

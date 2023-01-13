@@ -1,10 +1,5 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { paginas } from '../../src/paginas';
-import { useRouter } from 'next/router';
-
-
-
 
 const Titulo = styled.h5`
   font-size: 16px;
@@ -13,6 +8,9 @@ const Titulo = styled.h5`
 
 const OffCanvas = styled.div`
   background-color: var(--secondary7);
+  & .btn {
+    padding: 0;
+  }
 `;
 
 const Item = styled.div`
@@ -26,25 +24,63 @@ const Item = styled.div`
   }
 `;
 
+
+const Item2 = styled.div`
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  & a {
+    font-size: 0.8rem;
+  }
+`;
+
+const Lista = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
 export default function MenuLateral() {
-  const Router = useRouter();
+
   return (
-    <OffCanvas className="offcanvas mobile-toggler offcanvas-end w-75" tabIndex={-1} id="menuLateral" aria-labelledby="menuLateralLabel">
+    <OffCanvas className="offcanvas mobile-toggler offcanvas-end w-75" tabIndex={-1} id="menuLateral" aria-labelledby="menuLateralLabel" >
       <div className="offcanvas-header">
         <Titulo className="offcanvas-title" id="menuLateralLabel">Menu</Titulo>
         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div className="offcanvas-body d-flex flex-column gap-4" data-bs-dismiss="offcanvas">
-        {paginas.map((pagina) => {
-          return (<Item key={pagina.id.toString()} className="item">
-            <Link 
-              className={Router.pathname === pagina.caminho ? 'ativo' : ''} 
-              href={pagina.caminho}
-              role='button'
-            >{pagina.nome}
-            </Link>
-          </Item>);
-        })}
+      <div className="offcanvas-body d-flex flex-column gap-4">
+        <Item data-bs-dismiss="offcanvas" className="item">
+          <Link href={'/'} >Inicio</Link>
+        </Item>
+        <Item className="item" data-bs-dismiss="offcanvas">
+          <Link href={'/projetos'} >Projetos</Link>
+        </Item>
+        <Item  className="nav-item">
+          <a className="btn" 
+            data-bs-toggle="collapse" 
+            href="#collapseExample"
+            role="button" 
+            aria-expanded="false" 
+            aria-controls="collapseExample">
+            Soluções
+          </a>
+        </Item>
+        <Lista className="collapse" id="collapseExample">
+          <Item2 data-bs-dismiss="offcanvas">
+            <Link href={'/solucoes/consultoria-de-interiores'} replace>Consultoria</Link>
+          </Item2>
+          <Item2 data-bs-dismiss="offcanvas">
+            <Link  href={'/solucoes/projeto-de-marcenaria'} replace >Marcenaria</Link>
+          </Item2>
+          <Item2 data-bs-dismiss="offcanvas">
+            <Link  href={'/solucoes/projeto-de-interiores'} replace>Interiores</Link>
+          </Item2>
+        </Lista>
+
+        <Item className="item" data-bs-dismiss="offcanvas">
+          <Link  href={'/about'}>Sobre nós</Link>
+        </Item>
 
       </div>
     </OffCanvas>

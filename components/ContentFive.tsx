@@ -47,16 +47,12 @@ export default function ContentFive() {
             agreva valor ao seu imóvel
           </li>
         </Lista>
-        <Link className='link' style={{textDecoration: 'none'}} href='/comofunciona'>Conheça mais vantagens
+        <Link className='link' style={{textDecoration: 'none'}} href='/solucoes'>Conheça mais vantagens
         </Link>
       </div>
-      <DivImagem className='position-relative'>
-        <Image className='img-fluid' src={Business} alt="Imagem de pessoas efetuando cálculos de custos" />
+      <DivImagem>
+        <Image src={Business} alt="Imagem de pessoas efetuando cálculos de custos" />
       </DivImagem>
-
-
-
-
     </Section>
   );
 }

@@ -13,7 +13,12 @@ export const paginas = [{
 {
   id: 3,
   nome: 'Soluções',
-  caminho: '/solucoes-em-arquitetura',
+  caminho: '/solucoes',
+  subcaminhos: {
+    consultoria: 'Consultoria',
+    caminho: '/consultoria-online',
+    titulo: '/consutoria'
+  },
   titulo: 'Buose | Soluções em arquitetura'
 },
 {

@@ -7,6 +7,9 @@ const Externa = styled.div`
   padding: 10px 10px;
   height: 190px;
   width: 170px;
+  @media(max-width: 540px) {
+    width: 100%;
+  }
 `;
 const Numero = styled.span`
   background-color: var(--primary9);
