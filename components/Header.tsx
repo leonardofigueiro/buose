@@ -7,7 +7,6 @@ import MenuLateral from './Commons/menuLateral';
 import { useRouter } from 'next/router';
 import { useOnHoverOutside } from '../src/hooks/useOnHoverOutside';
 import MenuSolucoes from './Commons/menuSolucoes';
-import Cards from './Solucoes/Cards';
 
 const DivLogo = styled.div`
     display: flex;

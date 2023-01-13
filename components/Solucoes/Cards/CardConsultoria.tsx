@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { H1Card, HrCard, PCard, SpanCard, UlCard } from './HTMLitems';
+import { H1Card, HrCard, PCard, UlCard } from './HTMLitems';
 
 
 

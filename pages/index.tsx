@@ -5,7 +5,6 @@ import ContentTwo from '../components/ContentTwo';
 import ContentThree from '../components/ContentThree';
 import ContentFive from '../components/ContentFive';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import Form from '../components/Form';
 import Head from 'next/head';
 
 

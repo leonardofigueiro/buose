@@ -14,8 +14,8 @@ export default function Mail() {
   return (
     <div className='mt-2'>
       <Endereco className='mt-3 text-center'>
-        RUA COM NOME DE ÁRVORE, 13, JARDIM JACARANDÁS <br/>
-        SINOP - MT, CEP 78123-012
+        Rua das Ameixeiras, 118, JARDIM JACARANDÁS <br/>
+        SINOP - MT, CEP 78557-709
       </Endereco>
 
     </div>

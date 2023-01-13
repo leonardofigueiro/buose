@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Cards from '../../components/Solucoes/Cards';
 import Processo from '../../components/Solucoes/Processo';
 import PricingCards from '../../components/Solucoes/PricingCards';
 import Form from '../../components/Form';

@@ -20,11 +20,11 @@ export default function Phones() {
     <DivNumeros className='d-flex gap-4 justify-content-center flex-wrap flex-md-nowrap'>
       <div className='d-flex gap-1 align-items-end'>
         <Phone/>
-        <Tel>(65)99999-9999</Tel>
+        <Tel>(66)9 9906-8622</Tel>
       </div>
       <div className='d-flex gap-1 align-items-end'>
         <Whats/>
-        <Tel >(65)99999-9999</Tel>
+        <Tel >(66)9 9906-8622</Tel>
       </div>
     </DivNumeros>
 
