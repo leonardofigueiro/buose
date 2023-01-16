@@ -3,7 +3,6 @@ import { Montserrat, Quicksand } from '@next/font/google';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
-import 'animate.css/animate.min.css';
 import Layout from '../components/layout';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -41,7 +40,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <Analytics />
       </Layout>
-      {/* <Script src={'bootstrap/dist/js/bootstrap.min.js'}  /> */}
     </>
   );
 
