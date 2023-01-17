@@ -44,7 +44,7 @@ export default function ContentFive() {
             aproveita melhor o seu espaço
           </li>
           <li>
-            agreva valor ao seu imóvel
+            agrega valor ao seu imóvel
           </li>
         </Lista>
         <Link className='link' style={{textDecoration: 'none'}} href='/solucoes'>Conheça mais vantagens
