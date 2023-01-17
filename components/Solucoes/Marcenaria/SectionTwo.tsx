@@ -20,11 +20,11 @@ export default function SectionTwo() {
           </li>
           <li className={classname.lista__item}>
             <div className={classname.lista__icon}><Checked /></div>
-            <h4 className={classname.lista__texto}><b>Detalhamento</b>dos móveis</h4>
+            <h4 className={classname.lista__texto}><b>Detalhamento</b> dos móveis</h4>
           </li>
           <li className={classname.lista__item}>
             <div className={classname.lista__icon}><Checked /></div>
-            <h4 className={classname.lista__texto}>Uma<b>reunião online</b></h4>
+            <h4 className={classname.lista__texto}>Uma<b> reunião online</b></h4>
           </li>
         </ul>
       </div>

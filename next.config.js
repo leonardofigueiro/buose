@@ -8,7 +8,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  webpack: (config, options) => {
+  webpack: (config) => {
     // Configura o @svgr como um loader para imagens SVG usando o hook para o Webpack
     config.module.rules.push({
       test: /\.svg$/,
