@@ -2,8 +2,13 @@ import styled from 'styled-components';
 import Coffe from '../../public/icons/coffe.svg';
 import Checked from '../../public/icons/checked.svg';
 import Smile from '../../public/icons/smile.svg';
+import { useEffect, useState } from 'react';
+import { useCounter } from '../../src/hooks/Counter';
 
 const Number = styled.h4`
+text-align: center;
+display: flex;
+  justify-content: center;
 color: var(--secondary11);
 font-family: var(--fontDefault);
 font-weight: 700;
@@ -30,16 +35,23 @@ width: 170px;
 const Logo = styled.div`
   height: 50px;
   width: 50px;
+  display: flex;
+  justify-content: center;
 
 `;
 
 export default function Icons() {
+
+  const countAtendimentos = useCounter(0, 137);
+  const countProjetos = useCounter(0, 83);
+  const countClientes = useCounter(0, 90);
+
   return (
     <div className='d-flex  justify-content-center'>
-      <div className='d-flex flex-column align-items-center'>
+      <div className='d-flex flex-column align-items-center justify-content-center'>
         <Logo><Coffe /></Logo>
         <Number>
-          785
+          {countAtendimentos}
         </Number>
         <Description>
           Atendimentos realizados
@@ -48,7 +60,7 @@ export default function Icons() {
       <div className='d-flex flex-column align-items-center'>
         <Logo><Checked /></Logo>
         <Number>
-          785
+          {countProjetos}
         </Number>
         <Description>
           Projetos Concluídos
@@ -57,7 +69,7 @@ export default function Icons() {
       <div className='d-flex flex-column align-items-center'>
         <Logo><Smile /></Logo>
         <Number>
-          785
+          {countClientes}
         </Number>
         <Description>
           Clientes satisfeitos
