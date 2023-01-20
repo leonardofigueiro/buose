@@ -3,9 +3,11 @@ import SectionOne from '../../components/Solucoes/Consultoria/SectionOne';
 import SectionTwo from '../../components/Solucoes/Consultoria/SectionTwo';
 import Processo from '../../components/Solucoes/Processo';
 import Form from '../../components/Form';
+import { ReactElement } from 'react';
+import Layout from '../../components/layout';
 
 
-export default function Consultoria() {
+function Consultoria() {
 
   return (
     <>
@@ -19,3 +21,13 @@ export default function Consultoria() {
     </>
   );
 }
+
+Consultoria.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  );
+};
+
+export default Consultoria;

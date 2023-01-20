@@ -1,14 +1,15 @@
 import { Divisor, TituloCard } from '../components/Commons/Cards';
 import { images } from '../src/images';
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import Image from 'next/image';
 import '../styles/Modal.module.scss';
 import Head from 'next/head';
+import Layout from '../components/layout';
 
 
-export default function Projetos() {
+function Projetos() {
 
   const [toggler, setToggler] = useState(false);
   const [id, setId] = useState<Number>();
@@ -56,3 +57,13 @@ export default function Projetos() {
     </>
   );
 }
+
+Projetos.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  );
+};
+
+export default Projetos;

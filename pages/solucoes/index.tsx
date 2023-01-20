@@ -2,8 +2,10 @@ import Head from 'next/head';
 import Processo from '../../components/Solucoes/Processo';
 import PricingCards from '../../components/Solucoes/PricingCards';
 import Form from '../../components/Form';
+import { ReactElement } from 'react';
+import Layout from '../../components/layout';
 
-export default function ProjetoOnline() {
+function ProjetoOnline() {
 
   return (
     <>
@@ -18,3 +20,13 @@ export default function ProjetoOnline() {
     </>
   );
 }
+
+ProjetoOnline.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  );
+};
+
+export default ProjetoOnline;

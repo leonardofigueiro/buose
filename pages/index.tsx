@@ -5,6 +5,8 @@ import ContentTwo from '../components/ContentTwo';
 import ContentThree from '../components/ContentThree';
 import ContentFive from '../components/ContentFive';
 import Head from 'next/head';
+import { ReactElement } from 'react';
+import Layout from '../components/layout';
 
 
 function Home() {
@@ -29,5 +31,13 @@ function Home() {
     </>
   );
 }
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  );
+};
 
 export default Home;

@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import ContentFour from '../components/ContentFour';
 import Staff from '../components/About/Staff';
+import { ReactElement } from 'react';
+import Layout from '../components/layout';
 
 
-export default function About() {
+function About() {
   return (
     <>
       <Head>
@@ -20,3 +22,13 @@ export default function About() {
 
   );
 }
+
+About.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  );
+};
+
+export default About;

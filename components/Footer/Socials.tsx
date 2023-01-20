@@ -6,10 +6,8 @@ import Linkedin from '../../public/icons/linkedin.svg';
 export default function Socials() {
   return (
     <div className="d-flex gap-2 mt-4">
-      <a href='#'><Facebook/></a>
       <a target='_blank' href='https://www.instagram.com/buosearquitetura/' rel="noreferrer"><Instagram/></a>
-      <a href='#'><Twitter/></a>
-      <a href='#'><Linkedin/></a>
+      <a href='https://www.linkedin.com/in/brenda-buose-923712208/'><Linkedin/></a>
     </div>
   );
 }
