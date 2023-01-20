@@ -31,14 +31,10 @@
     font-size: 25px;
     display: inline-block;
     font-weight: bold;
-    border-radius: 1em;
     text-transform: uppercase;
     font-weight: 400;
     color: var(--secondary13);
     padding: 0.3em 0.6em;
-    
-    backdrop-filter: blur(10px) saturate(160%) contrast(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
   }
 }
 
