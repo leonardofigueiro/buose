@@ -35,10 +35,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/logos/favicon.png"></link>
         <link rel='canonical' href='https://www.buosearquitetura.com.br' />
 
+        <Analytics />
       </Head>
       <Layout>
         <Component {...pageProps} />
-        <Analytics />
       </Layout>
     </>
   );
