@@ -3,14 +3,13 @@ import { useEffect, useState } from 'react';
 import Internet from '../../public/icons/Instagram/internet.svg';
 import Whatsapp from '../../public/icons/Instagram/msg.svg';
 import { useInterval } from '../../src/hooks/Shake';
-import Image from 'next/image';
 
 interface ShakeElementProps {
 
 }
 
 
-const InstaBio: React.FC<ShakeElementProps> = (props) => {
+const InstaBio: React.FC<ShakeElementProps> = () => {
   const [transparent, setTransparent] = useState(false);
   const [shake, setShake] = useState(false);
   useEffect(() => {
@@ -33,7 +32,7 @@ const InstaBio: React.FC<ShakeElementProps> = (props) => {
       <main className={transparent ? classname.mainVisivel : classname.main}>
         <header className={classname.header}>
 
-          <img src='logos/logoBuose.svg'/>
+          <img src='logos/logoBuose.svg' alt='Logomar Buose Arquitetura'/>
           <h1>Buose Arquitetura</h1>
         </header>
         <div className={classname.shakingElement}>

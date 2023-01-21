@@ -3,7 +3,6 @@ import { Montserrat, Quicksand } from '@next/font/google';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
-import Layout from '../components/layout';
 import { ReactElement, ReactNode } from 'react';
 import { NextPage } from 'next';
 

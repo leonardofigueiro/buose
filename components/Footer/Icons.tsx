@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Coffe from '../../public/icons/coffe.svg';
 import Checked from '../../public/icons/checked.svg';
 import Smile from '../../public/icons/smile.svg';
-import { useEffect, useState } from 'react';
 import { useCounter } from '../../src/hooks/Counter';
 
 const Number = styled.h4`
