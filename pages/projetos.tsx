@@ -1,18 +1,46 @@
 import { Divisor, TituloCard } from '../components/Commons/Cards';
 import { images } from '../src/images';
-import { ReactElement, useState } from 'react';
-import Lightbox from 'react-image-lightbox';
+import { ReactElement, useEffect, useState } from 'react';
 import 'react-image-lightbox/style.css';
 import Image from 'next/image';
-import '../styles/Modal.module.scss';
+import classname from '../styles/Modal.module.scss';
 import Head from 'next/head';
 import Layout from '../components/layout';
 
-
 function Projetos() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
-  const [toggler, setToggler] = useState(false);
-  const [id, setId] = useState<Number>();
+  const openModal = (image: string, index: number) => {
+    setSelectedImage(image);
+    setIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === 'ArrowRight') {
+      setIndex((index + 1) % images.length);
+      setSelectedImage(images[index]);
+    } else if (event.key === 'ArrowLeft') {
+      setIndex(
+        (index - 1 + images.length) % images.length
+      );
+      setSelectedImage(images[index]);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [index]);
+
 
   return (
     <>
@@ -26,32 +54,27 @@ function Projetos() {
         <Divisor />
         <div className="d-flex flex-wrap justify-content-center gap-3">
 
-          {images.map((image) => {
-            return (
-              <>
-                <Image
-                  key={String(image.id)}
-                  className='img-thumbnail pointer'
-                  width={330} height={190}
-                  src={`/projetos/thumb/${image.src}_Easy-Resize.com.webp`}
-                  alt='Imagem realista de uma bela casa'
-                  onClick={() => {
-                    setToggler(!toggler);
-                    setId(image.id);
-                  }}
-                />
-              </>);
-          })}
-          {toggler && (
-            <Lightbox
-              mainSrc={`projetos/${images[id as number - 1].src}.webp`}
-              onCloseRequest={() => setToggler(!toggler)}
-              onImageLoad={() => {
-                window.dispatchEvent(new Event('resize'));
-              }}
-              discourageDownloads
-            />)}
 
+
+          {images.map((image, i) => (
+            <div className={classname.imageWrapper} key={image} onClick={() => openModal(images[i], i)}>
+              <Image src={`/projetos/thumb/${image}_Easy-Resize.com.webp`} alt='Imagem realista de um projeto arquitetônico' width={330} height={190} />
+            </div>
+          ))}
+          {modalOpen && (
+            <div className={classname.modal}>
+              
+              <button className={`${classname.arrowButton} ${classname.left}`} onClick={() => openModal(images[(index - 1 + images.length) % images.length], (index - 1 + images.length) % images.length)}> &lt; </button>
+
+
+              <Image src={`/projetos/${selectedImage as string}.webp`} alt='Imagem realista de um projeto arquitetônico' width={1500} height={800} className={classname.image} />
+              
+              <button className={`${classname.arrowButton} ${classname.right}`} onClick={() => openModal(images[(index + 1) % images.length], (index + 1) % images.length)}> &gt; </button>
+
+
+              <button className={classname.closeButton} onClick={closeModal}>X</button>
+            </div>
+          )}
         </div>
       </section>
     </>
