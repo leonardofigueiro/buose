@@ -45,14 +45,14 @@ const InstaBio: React.FC<ShakeElementProps> = () => {
             </li>
             <li>
               <a
-                href="https://wa.me/66999130621">
+                href="https://wa.me/+5566999130621">
                 <Whatsapp />
                 Brenda Buose
               </a>
             </li>
             <li>
               <a
-                href="https://wa.me/66999068622">
+                href="https://wa.me/+5566999068622">
                 <Whatsapp />
                 Gabriellin Buose
               </a>

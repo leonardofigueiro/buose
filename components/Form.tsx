@@ -9,12 +9,26 @@ import axios from 'axios';
 export default function Form() {
 
 
+  function gtag_report_conversion(url:Location | (string & Location)) {
+    const callback = function () {
+      if (typeof (url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-11074144232/V-osCNLDh4kYEOiPyKAp',
+      'event_callback': callback
+    });
+    return false;
+  }
+
+
   const [nome, setNome] = useState('');
   const [sobrenome, setSobrenome] = useState('');
   const [tel, setTel] = useState('');
   const [email, setEmail] = useState('');
   const [msg, setMsg] = useState('');
-  const [plano , setPlano] = useState('interiores');
+  const [plano, setPlano] = useState('interiores');
 
   const data = {
     service_id: 'service_3snekti',
@@ -133,7 +147,10 @@ export default function Form() {
         </div>
 
 
-        <Button type='submit'>ENVIAR</Button>
+        <Button 
+          type='submit'
+          onClick={() => gtag_report_conversion(window.location)}
+        >ENVIAR</Button>
 
       </form>
 
