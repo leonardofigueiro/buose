@@ -9,7 +9,7 @@ import axios from 'axios';
 export default function Form() {
 
 
-  function gtag_report_conversion(url:Location | (string & Location)) {
+  function gtag_report_conversion(url?:Location | (string & Location)) {
     const callback = function () {
       if (typeof (url) != 'undefined') {
         window.location = url;
@@ -62,7 +62,6 @@ export default function Form() {
         setTel('');
       });
   };
-  console.log(window.location);
 
   return (
     <section className=' container d-flex flex-wrap flex-lg-nowrap mt-5 justify-content-center align-items-center' id='formulario'>
@@ -75,7 +74,7 @@ export default function Form() {
         method='POST' 
         onSubmit={(event) => {
           sendEmail(event);
-          gtag_report_conversion(window.location);
+          gtag_report_conversion();
         }} >
         <div className='d-flex gap-3'>
           <div className='d-flex flex-column'>
