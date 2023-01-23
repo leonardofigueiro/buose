@@ -13,6 +13,7 @@ const Analytics = () => {
             gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING}', {
               page_path: window.location.pathname,
             });
+            gtag('config', 'AW-11074144232');
           `
       }}
     />

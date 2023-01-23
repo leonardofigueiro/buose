@@ -62,7 +62,7 @@ export default function Form() {
         setTel('');
       });
   };
-
+  console.log(window.location);
 
   return (
     <section className=' container d-flex flex-wrap flex-lg-nowrap mt-5 justify-content-center align-items-center' id='formulario'>
@@ -70,7 +70,13 @@ export default function Form() {
         <b>Não perca tempo, </b>
         entre em contado agora mesmo!
       </Title>
-      <form className='d-flex flex-column gap-3 align-items-center' method='POST' onSubmit={(event) => sendEmail(event)} >
+      <form 
+        className='d-flex flex-column gap-3 align-items-center' 
+        method='POST' 
+        onSubmit={(event) => {
+          sendEmail(event);
+          gtag_report_conversion(window.location);
+        }} >
         <div className='d-flex gap-3'>
           <div className='d-flex flex-column'>
             <Label htmlFor="name"> Nome</Label>
@@ -149,7 +155,6 @@ export default function Form() {
 
         <Button 
           type='submit'
-          onClick={() => gtag_report_conversion(window.location)}
         >ENVIAR</Button>
 
       </form>
