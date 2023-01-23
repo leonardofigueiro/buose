@@ -7,6 +7,8 @@ import { ReactElement, ReactNode, useEffect } from 'react';
 import { NextPage } from 'next';
 import * as gtag from '../src/utils.gtag';
 import { useRouter } from 'next/router';
+import TagManager from 'react-gtm-module';
+
 
 
 
@@ -35,6 +37,13 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
+  useEffect(() => {
+    const tagManagerArgs = {
+      gtmId: 'GTM-WDZ4DDG'
+    };  
+
+    TagManager.initialize(tagManagerArgs);
+  }, []);
 
   const getLayout = Component.getLayout ?? ((page) => page);
   return getLayout(
