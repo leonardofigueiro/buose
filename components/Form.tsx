@@ -9,18 +9,6 @@ import axios from 'axios';
 export default function Form() {
 
 
-  async function gtag_report_conversion(url?:Location | (string & Location)) {
-    const callback = function () {
-      if (typeof (url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    await gtag('event', 'conversion', {
-      'send_to': 'AW-11074144232/V-osCNLDh4kYEOiPyKAp',
-      'event_callback': callback
-    });
-    return false;
-  }
 
 
   const [nome, setNome] = useState('');
@@ -49,7 +37,6 @@ export default function Form() {
     e.preventDefault();
     axios.post('https://api.emailjs.com/api/v1.0/email/send', data)
       .then(() => {
-        gtag_report_conversion();
         alert('Seu e-mail foi enviado! Em breve retornaremos.');
       })
       .catch((err) => {
