@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 import Analytics from '../components/Analytics';
+import WhatsButton from '../components/Commons/WhatsButton';
 
 export default function Document() {
   return (
@@ -11,6 +12,7 @@ export default function Document() {
 
         <Main />
         <NextScript />
+        
       </body>
     </Html>
   );

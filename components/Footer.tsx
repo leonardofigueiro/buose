@@ -3,6 +3,7 @@ import Mail from './Footer/Mail';
 import Phones from './Footer/Phones';
 import Logo from '../public/logos/logoBuose.svg';
 import classname from './Footer/Footer.module.scss';
+import WhatsButton from './Commons/WhatsButton';
 
 
 export default function Footer() {
@@ -15,7 +16,7 @@ export default function Footer() {
         <Socials />
         <Mail />
         <Phones />
-
+        <WhatsButton/>
       </section>
 
     </footer>
