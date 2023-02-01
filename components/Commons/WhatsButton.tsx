@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useInterval } from '../../src/hooks/Shake';
 import classname from '../../styles/WhatsButton.module.scss';
 import classname2 from '../../styles/Instabio.module.scss';

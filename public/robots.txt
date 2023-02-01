@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://buosearquitetura.com.br
+
+# Sitemaps
+Sitemap: https://buosearquitetura.com.br/sitemap.xml
+Sitemap: https://buosearquitetura.com.br/server-sitemap.xml
