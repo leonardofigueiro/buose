@@ -1,6 +1,5 @@
 import { SubTitle, TituloCard } from '../Commons/Cards';
 import styled from 'styled-components';
-import 'react-image-lightbox/style.css';
 import OnlineIcon from '../../public/icons/online.svg';
 import MedalIcon from '../../public/icons/dedicacao.svg';
 import Wallet from '../../public/icons/wallet.svg';

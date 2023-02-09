@@ -1,7 +1,6 @@
 import { Divisor, TituloCard } from '../components/Commons/Cards';
 import { images } from '../src/images';
 import { ReactElement, useEffect, useState } from 'react';
-import 'react-image-lightbox/style.css';
 import Image from 'next/image';
 import classname from '../styles/Modal.module.scss';
 import Head from 'next/head';

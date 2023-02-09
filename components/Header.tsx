@@ -42,6 +42,7 @@ function Header() {
         setSmall(window.pageYOffset > 200)
       );
     }
+    require('bootstrap/js/dist/offcanvas');
 
   }, []);
 

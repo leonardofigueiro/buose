@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Titulo = styled.h5`
@@ -42,7 +43,9 @@ const Lista = styled.ul`
 `;
 
 export default function MenuLateral() {
-
+  useEffect(() => {
+    require('bootstrap/js/dist/collapse');
+  },[]);
   return (
     <OffCanvas className="offcanvas mobile-toggler offcanvas-end w-75" tabIndex={-1} id="menuLateral" aria-labelledby="menuLateralLabel" >
       <div className="offcanvas-header">

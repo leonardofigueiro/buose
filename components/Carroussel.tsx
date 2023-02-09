@@ -2,8 +2,12 @@ import Image from 'next/image';
 import Carolsel1 from '../public/images/carousel/carousel1.webp';
 import Carolsel2 from '../public/images/carousel/carousel2.webp';
 import Carolsel3 from '../public/images/carousel/carousel3.webp';
+import { useEffect } from 'react';
 
 export default function Carroussel() {
+  useEffect(() => {
+    require('bootstrap/js/dist/carousel');
+  },[]);
   return (
 
     <div id="carouselExampleIndicators" className="carousel slide mt-3" data-bs-ride="carousel">
